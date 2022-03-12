@@ -24,7 +24,7 @@ public class Pila implements Machote<Integer> {
 
     @Override
     public boolean vacia() {
-        return tope == 1;
+        return tope == -1;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Pila implements Machote<Integer> {
 
     @Override
     public boolean inserta(Integer dato) {
-        if(!llena(p.length)){
+        if (!llena(p.length)) {
             p[++tope] = dato;
             return true;
         }
@@ -43,7 +43,7 @@ public class Pila implements Machote<Integer> {
 
     @Override
     public Integer elimina() {
-        if(!vacia()){
+        if (!vacia()) {
             return p[tope--];
         }
         return null;
